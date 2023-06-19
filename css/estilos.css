@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Alkatra&family=Indie+Flower&family=Ysabeau:ital,wght@1,100;1,400&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar-brand {
+    font-size: 50px;
+    font-family: "Ysabeau", sans-serif;
+    color: black;
+    margin-left: 250px;
+}
+
+.navbar-brand span {
+    color: lightcoral;
+}
+
+.fondo{
+    padding-top: 100px;
+    padding-bottom: 300px;
+    background-image: url(../img/fondoindex.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    opacity: 0.8;
+}
+
+.container {
+    width: 500px;
+    height: 300px;
+    background-color: linen;
+    padding: 50px 20px;
+    text-align: center;
+    margin-top: 150px;
+    font-family: "Ysabeau", sans-serif;
+    font-size: 25px;
+    color: black;
+    opacity: 0.8;
+}
+
+.container h1 {
+    font-size: 40px;
+    color: cornflowerblue;
+    font-family: "Alkatra", cursive;
+}
+
+/* pedi tu menu */
+h3 {
+    margin-top: 50px;
+    text-align: center;
+    font-family: "Ysabeau", sans-serif;
+    font-size: 50px;
+    color: black;
+}
+
+/* menu */
+.row{
+    padding: 50px;
+}
+.card-img-top{
+    height: 350px;
+}
+
+
+h5 {
+    text-align: center;
+    font-family: "Ysabeau", sans-serif;
+    font-size: 30px;
+    text-decoration: underline;
+}
+
+.card-group .card-text {
+    font-family: "Ysabeau", sans-serif;
+}
+
+
+/* footer */
+.pie-pagina {
+    width: 100%;
+    background-color: white;
+    margin-top: 300px;
+}
+
+.pie-pagina .grupo-1 {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+    padding: 45px 0px;
+}
+
+.pie-pagina .box figure {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pie-pagina img {
+    width: 200px;
+    height: 200px;
+}
+
+.pie-pagina .box h2 {
+    text-align: center;
+    color: black;
+    margin-top: 15px;
+    margin-bottom: 25px;
+    font-size: 20px;
+}
+
+.pie-pagina .box p {
+    color: black;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.pie-pagina .red-social a {
+    display: inline-block;
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    color: black;
+    margin-left: 50px;
+    text-align: center;
+    transition: all 300ms ease;
+}
+
+.pie-pagina .grupo-2 {
+    background-color: cornflowerblue;
+    padding: 15px 10px;
+    text-align: center;
+    color: black;
+}
+
+.pie-pagina .grupo-2 .grupo-2 small {
+    font-size: 15px;
+}
