@@ -1,169 +1,3 @@
-// // Bienvenida
-// console.log("Hola!! Bienvenido a Popi Cafe")
-
-// // Identificarse
-// var usuario = prompt("Hola! Bienvenido a Popi Cafe, a continuacion ingresá tu nombre:  ")
-
-
-// // Eleccion
-// var consulta = prompt(usuario + " Selecciona: 1-Para consumir en Popi Cafe o 2-Para hacer un pedido")
-
-
-// if (consulta == 1) {
-//     consulta = alert("Seleccionaste para consumir en Popi Cafe")
-// } else {
-//     pedido = alert("Seleccionaste hacer un pedido")
-// }
-
-// // Variables menu
-// var precio;
-
-// let menu1 = 3500;
-// let menu2 = 3300;
-// let menu3 = 3600;
-// let menu4 = 4000;
-// let menu5 = 3200;
-
-
-// // Eleccion de Menu
-
-// function elijetumenu() {
-//     let menu
-
-//     do {
-//         menu = parseInt(prompt(`Elije tu menu:
-//                 1 -Brunch Time ($ 3500) 
-//                 2 -Pink Tower ($3300)
-//                 3 -Tentaciones ($3600)
-//                 4 -Wafles ($4000)
-//                 5 -Cafeteria  ($3200)`))
-//     } while ((menu > 0 && menu > 5));
-//     return menu
-// }
-
-// menu = elijetumenu()
-
-// switch (menu) {
-//     case 1:
-//         precio = menu1
-//         eleccion = "Brunch Time"
-//         break;
-//     case 2:
-//         precio = menu2
-//         eleccion = "Pink Tower"
-//         break;
-//     case 3:
-//         precio = menu3
-//         eleccion = "Tentaciones"
-//         break;
-//     case 4:
-//         precio = menu4
-//         eleccion = "Wafles"
-//         break;
-//     case 5:
-//         precio = menu5
-//         eleccion = "Cafeteria"
-//         break;
-// }
-
-// // Resumen de compra
-// alert("Tu pedido  " + eleccion + "," + " estará listo en 20 minutos " + "." + "Total a pagar: $" + precio)
-// console.log(eleccion)
-// console.log(precio)
-
-
-// // Participa del sorteo
-// alert("Con tu compra participas de un sorteo por un menu a elección, tienes 2 intentos")
-
-// const NUMEROSORTEO = 69
-
-// var pedirNumero = 0
-// var suerte = 2
-
-// for(let i=0; i<2; i++){
-//     pedirNumero = parseInt(prompt("Ingresa un número de 0 a 100"))
-//     if(pedirNumero==NUMEROSORTEO){
-//         alert("GANASTE!!!!!!!!!!")
-//         break
-//     }else 
-//         alert("La próxima vez será")
-//         suerte--
-//     }
-//     console.log("Fin del pedido")
-
-
-// const menues = ["Brunch Time", "Pink Tower", "Tentaciones", "Wafles", "Cafeteria"]
-// const precios = [3500,3600,3300,4000,3200]
-// console.log(menues)
-
-// for (let i=0; i<5; i++){
-//     console.log ("Menu: " +i)
-//     console.log (menues[i] + " " + precios [i])
-// }
-
-// // Funcion constructora
-// function tiposDeInfusion(nombre, sabor, color, estado){
-//     this.nombre= nombre;
-//     this.sabor= sabor;
-//     this.color= color;
-//     this.estado= estado
-//     }
-
-// const te= new tiposDeInfusion("te", "hierbas","verde", "caliente")
-// const limonada= new tiposDeInfusion("limonada", "limon", "amarillo", "frio")
-
-// console.log("El te se encuentra " + te.estado)
-// console.log("El color de la limonada es " + limonada.color)
-
-// // alert("El te recomendado por Popi Cafe es de "+ te.sabor)
-
-// // Metodo forEach
-// const cafe= ["submarino", "chocolatada", "lagrima", "macchiato", "cafe con leche", "vainilla latte", "caramel cafe"]
-// cafe.forEach( (el) => {
-//     console.log (el)
-// })
-
-// console.log(cafe.length)
-
-// alert(" Nuestros gustos de cafe son " + cafe)
-
-// // Metodo find
-// const carta= [
-//     {
-//         nombre: "Brunch Time",
-//         precio: 3500
-//     },
-//     {
-//         nombre: "Pink Tower",
-//         precio: 3600
-//     },
-//     {
-//         nombre: "Tentaciones",
-//         precio: 3300
-//     },
-//     {
-//         nombre: "Wafles",
-//         precio: 4000
-//     },
-//     {
-//         nombre: "Cafeteria",
-//         precio: 3200
-//     },
-// ]
-
-// const precioMenu = carta.find ((el) => el.nombre === "Tentaciones")
-// const pesos = carta.find ((el) => el.precio === 3600)
-// console.log(precioMenu)
-// console.log(precio)
-
-
-
-// 3era pre entrega
-console.log("probando nueva entrega")
-
-
-
-
 // construyo los objetos
 
 const productosMenu = [{
@@ -253,38 +87,40 @@ let contenedorCarta = document.getElementById("contenedorCarta")
 
 console.log("contenedorCarta")
 
-productosMenu.forEach((productosMenu) => {
+productosMenu.forEach((productos) => {
 
-    console.log(productosMenu)
+    console.log(productos)
 
 // contenedor de los elementos
     let contenedor = document.createElement("div")
     contenedor.innerHTML = `
     <div class="col">
         <div class="card">
-            <img src="${productosMenu.imagen}" class="card-img-top" alt="...">
+            <img src="${productos.imagen}" class="card-img-top" alt="...">
             <div class="card-body">
-                <h5 class="card-title">${productosMenu.nombre}</h5>
-                <p class="card-text">"${productosMenu.descripcion}</p>
-                <h4><p>$</p>${productosMenu.precio}</h4>
+                <h5 class="card-title">${productos.nombre}</h5>
+                <p class="card-text">"${productos.descripcion}</p>
+                <h4><p>$</p>${productos.precio}</h4>
             </div>
-            <button id="botonComprar" type="button" class="btn btn-danger">Comprar</button>
+            <button id=${productos.id} type="button" class="btn btn-danger">Comprar</button>
         </div>
     </div>
-    `
+    `;
 
     contenedorCarta.append(contenedor)
 
-// funcionalidad al boton comprar
-let botonComprar = document.getElementById("botonComprar")
+// funcionalidad al boton comprar y asincronia
+let botonComprar = document.getElementById(`${productos.id}`)
 botonComprar.addEventListener("click", agregarCarrito)
-botonComprar.addEventListener("click", llamarSweet);
-
 
 })
 
 function agregarCarrito(){
-    console.log("agregar carrito")
+    console.log("agregar carrito");
+    llamarSweet();
+    setTimeout(()=>{
+        console.log("producto agregado")}, 3000)
+
 }
 
 function llamarSweet(){
@@ -294,6 +130,49 @@ function llamarSweet(){
         text: 'Tu pedido fue agregado!'
     })
 }
+
+// promesas
+const listado = [
+    {id: 1, nombre: "Brunch Time", precio:3500},
+    {id: 2, nombre: "Pink Tower", precio:3600},
+    {id: 3, nombre: "Tentaciones", precio:3300},
+    {id: 4, nombre: "Wafles", precio:4000},
+    {id: 5, nombre: "Cafeteria", precio:3200},
+    {id: 6, nombre: "Muffins", precio:3700},
+    {id: 7, nombre: "Tortas", precio:4500},
+    {id: 8, nombre: "Jugos", precio:4300},
+    {id: 9, nombre: "Batidos", precio:4500},    
+    {id: 10, nombre: "Aguas y Gaseosas", precio:750},
+]
+
+const pedirProductos = () => {
+    return new Promise((resolve, reject) => {
+        setTimeout(() =>{
+            resolve (listado)
+        }, 6000)
+    })
+}
+
+let productos = []
+
+const renderProductos = (arr) => {
+    console.log(arr)
+}
+
+pedirProductos()
+.then((res) => {
+    productos = res
+    renderProductos(productos)
+})
+
+.catch(() =>{
+    console.log("No hay pedidos")
+})
+
+.finally(()=>{
+    console.log("cumplio promesa")
+})
+
 // datos local storage
 let nombreLocalStorage = prompt("Por favor, ingresa tu nombre")
 localStorage.setItem("nombreUsuario", nombreLocalStorage)
